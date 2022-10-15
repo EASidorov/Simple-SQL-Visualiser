@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block body %}
+    <title>Upload new File</title>
+    <h1>SQL Check</h1>
+    <h4>Upload a .db file:</h4>
+    <form method=post enctype=multipart/form-data>
+      <input type="file" name="file" class="file">
+      <input type=submit value=Upload class="button">
+    </form>
+<div class="flashmsg">
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+</div>
+{% endblock %}

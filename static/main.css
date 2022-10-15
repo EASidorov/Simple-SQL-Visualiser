@@ -1,0 +1,85 @@
+body {
+  background: Linen;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px
+  }
+
+h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 2.5em;
+  color: #42372a;
+  text-align: center
+  }
+
+h4,h5 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.5em;
+  color: #42372a;
+  text-align: center
+  }
+
+table {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%
+}
+
+th,td {
+  border: 1px solid black;
+  text-align: center
+}
+
+th {
+  background-color: #cdc0b0;
+  text-align: center;
+  height: 50px;
+}
+
+tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background: #f4f4f4;
+}
+
+.button {
+    top:30%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left:50%;
+    position: absolute;
+    background-color:#cdc0b0;
+    text-color: #fff;
+    border:none;
+    border-radius:10px;
+    min-height:30px;
+    min-width: 120px;
+}
+
+.file {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color:#cdc0b0;
+    text-color: #fff;
+    border:none;
+    border-radius:10px;
+    min-height:30px;
+    min-width: 120px;
+}
+
+.flashmsg{
+    color: #ff0000;
+    position: absolute;
+    top:27%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left:50%;
+}

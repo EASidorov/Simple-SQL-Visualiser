@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block body %}
+<h1>SQL Check</h1>
+<h5>Your database: {{ filename }}</h5>
+<h5>Choose a table</h5>
+{% for table in tables %}
+<form method=post><input type="submit" id='table' name="table" value="{{ table }}" class="button"></form>
+{% endfor %}
+{% endblock %}
