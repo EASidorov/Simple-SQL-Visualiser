@@ -1,6 +1,6 @@
 import os
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, inspect, select
-from flask import Flask, render_template, url_for, request, redirect, flash
+from flask import Flask, render_template, url_for, request, redirect, flash, session
 
 UPLOAD_FOLDER = os.getcwd() + '/dbs/'
 ALLOWED_EXTENSIONS = 'db'
@@ -32,6 +32,7 @@ def upload_file():
             return redirect(request.url)
         if file and file_check(file.filename):
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+            #session['database'] = create_engine('sqlite:///dbs/' + file.filename, echo=True)
             return redirect(url_for('tables_list', filename=file.filename))
         else:
             flash('Wrong file!')
